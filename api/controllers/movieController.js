@@ -5,6 +5,12 @@ const addMovie = async (req, res) => {
     res.json(movie);
 };
 
+const getAllMovies = async (req, res) => {
+    let movies = await Movie.find().exec();
+    res.json(movies);
+};
+
 module.exports = {
-    addMovie
+    addMovie,
+    getAllMovies
 }
