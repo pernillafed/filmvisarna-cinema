@@ -8,9 +8,7 @@ const uri =
 
 
 // Routes
-// const consoleRoutes = require("./routes/consoleRoutes");
-// const gameRoutes = require("./routes/gameRoutes");
-// const genreRoutes = require("./routes/genreRoutes");
+const movieRoutes = require("./routes/movieRoutes");
 
 // Server Setup
 const app = express();
@@ -42,9 +40,7 @@ mongoose
   });
 
 // Routes setup
-// app.use("/api/v1/consoles", consoleRoutes);
-// app.use("/api/v1/games", gameRoutes);
-// app.use("/api/v1/genres", genreRoutes);
+app.use("/api/v1/movies", movieRoutes);
 
 // Start Server
 app.listen(port, (err) => {
