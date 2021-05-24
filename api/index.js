@@ -8,6 +8,7 @@ const uri =
 
 
 // Routes
+const screensRoutes = require("./routes/screensRoutes");
 const movieRoutes = require("./routes/movieRoutes");
 
 // Server Setup
@@ -41,6 +42,7 @@ mongoose
 
 // Routes setup
 app.use("/api/v1/movies", movieRoutes);
+app.use("/api/v1/screens", screensRoutes);
 
 // Start Server
 app.listen(port, (err) => {
