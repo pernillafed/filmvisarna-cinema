@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 
 const port = 3001;
 const uri =
-  "mongodb+srv://dbTest:dbTestPassword@cluster0.gneaa.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+  "mongodb+srv://dbTest:dbTestPassword@cluster0.gneaa.mongodb.net/cinemaDB?retryWrites=true&w=majority";
 
 
 // Routes
