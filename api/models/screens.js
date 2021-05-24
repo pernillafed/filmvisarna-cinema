@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const screenSchema = new Schema({
     name: String,
-    rows: [String],
+    rows: [{String}],
     seatsPerRow: {String}
 });
 
