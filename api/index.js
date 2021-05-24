@@ -4,11 +4,12 @@ const mongoose = require("mongoose");
 
 const port = 3001;
 const uri =
-  "mongodb+srv://dbTest:dbTestPassword@cluster0.gneaa.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+  "mongodb+srv://dbTest:dbTestPassword@cluster0.gneaa.mongodb.net/cinemaDB?retryWrites=true&w=majority";
 
 
 // Routes
 const screensRoutes = require("./routes/screensRoutes");
+const movieRoutes = require("./routes/movieRoutes");
 
 // Server Setup
 const app = express();
@@ -40,6 +41,7 @@ mongoose
   });
 
 // Routes setup
+app.use("/api/v1/movies", movieRoutes);
 app.use("/api/v1/screens", screensRoutes);
 
 // Start Server
