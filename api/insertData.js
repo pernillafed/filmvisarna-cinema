@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Movie = require('./models/Movie');
-const uri = 'uri goes here';
+const uri = 'mongodb+srv://dbTest:dbTestPassword@cluster0.gneaa.mongodb.net/cinemaDB?retryWrites=true&w=majority';
 const movieData = require('./data/movieData.json');
 
 mongoose.connect(uri, {
@@ -8,7 +8,8 @@ mongoose.connect(uri, {
   useUnifiedTopology: true,
 }).then(() => {
   console.log("MongoDb connected")
-  // insertData();
+  insertData();
+  console.log(movieData);
 }).catch((err) => {
   console.log(err)
 })
