@@ -4,11 +4,8 @@ const Schema = mongoose.Schema;
 const showingSchema = new Schema({
     movieId: [{ type: Schema.Types.ObjectId, ref: 'Movie' }],
     screenId: [{ type: Schema.Types.ObjectId, ref: 'Screen' }],
-    date: Date,
-    timestamps: {
-        type: Boolean,
-        default: true
-    },
+    date: String,
+    time: String,
     bookedSeats: [String]
 });
 
