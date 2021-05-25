@@ -5,7 +5,10 @@ const showingSchema = new Schema({
     movieId: [{ type: Schema.Types.ObjectId, ref: 'Movie' }],
     screenId: [{ type: Schema.Types.ObjectId, ref: 'Screen' }],
     date: Date,
-    timestamps: true,
+    timestamps: {
+        type: Boolean,
+        default: true
+    },
     bookedSeats: [String]
 });
 
