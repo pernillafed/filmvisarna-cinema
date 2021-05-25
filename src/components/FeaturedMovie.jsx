@@ -1,6 +1,10 @@
+import img from '../assets/Placeholder-featuredMovie(1).jpg';
+
 function FeaturedMovie() {
     return (
-        <h1>Featured movie works</h1>
+        <div className="featured-movie">
+            <img src={img} alt="Casablanca placeholder" />
+        </div>
     )
 }
 
