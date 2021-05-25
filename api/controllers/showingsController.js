@@ -1,3 +1,10 @@
 const Showings = require("../models/Showings");
 
-module.exports = {}
+const addShowing = async (req, res) => {
+    let showing = await Showings.create(req.body);
+    res.json(showing);
+};
+
+module.exports = {
+    addShowing
+}
